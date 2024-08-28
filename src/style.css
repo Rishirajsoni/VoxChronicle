@@ -1,0 +1,162 @@
+/* Base styles */
+body {
+  background-color: #d1e2f2;
+  color: #343a40;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.8); /* Translucent white */
+  backdrop-filter: blur(10px); /* Blur background behind the navbar */
+  border-radius: 50px; /* Round pill design */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 0.5rem 1rem;
+  margin-bottom: 40px;
+}
+
+.navbar-brand, .nav-link {
+  color: #4f5357;
+  font-weight: bold; /* Make text bold */
+}
+
+.navbar-brand img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.nav-link {
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+  margin-right: 10px; /* Add space between links */
+  color: #4f5357
+}
+
+.nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Light gray on hover */
+  color: #343a40;
+}
+
+/* Adjust for the last nav-link to remove right margin */
+.navbar-nav .nav-item:last-child .nav-link {
+  margin-right: 0;
+}
+
+
+/* Button for controlling speech functionality */
+.speech-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999; /* Ensure it appears above other elements */
+}
+
+.speech-button button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%; 
+  background-color: #4fb9fa;
+  border: none;
+  color: #fff; 
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.speech-button button:hover {
+  background-color: #00779f;
+}
+
+.btn-success {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+
+.btn-danger {
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+/* Cards */
+.card {
+  transition: transform 0.2s;
+  background-color: #fdfdfe; /* Very light gray */
+  color: #343a40;
+  border: 1px solid #dee2e6;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  color: #343a40;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #f4f4b1; /* Cream beige */
+  border-color: #f4f4b1;
+  color: #343a40; /* Dark gray */
+}
+
+.btn-primary:hover {
+  background-color: #fad28b; /* Moccasin */
+  border-color: #fad28b;
+  color: #343a40; /* Dark gray */
+}
+
+/* Links */
+a {
+  color: #87cefa; /* Light sky blue */
+}
+
+a:hover {
+  color: #00bfff; /* Deep sky blue */
+}
+
+/* General container styling */
+.container {
+  margin-top: 20px;
+}
+
+.categories-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px; /* Space between the cards */
+  padding: 10px 0;
+  margin-bottom: 40px;
+}
+
+.category-card {
+  flex: 0 0 auto;
+  width: 90px; /* Adjust width to fit all cards in one line */
+  border: none;
+  background: #f8f9fa;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px; /* Add padding for better spacing within the card */
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.category-card .card-body {
+  padding: 10px 0; /* Adjust padding to fit the content well */
+}
+
+.category-card .card-title {
+  margin-top: 10px;
+  font-size: 0.8rem; /* Adjust font size to ensure the text fits within the card */
+  color: #333;
+  white-space: normal; /* Ensure text wraps within the card */
+}
