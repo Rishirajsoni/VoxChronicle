@@ -40,7 +40,7 @@ export class News extends Component {
 
   async fetchNewsData() {
     const { country, category, pageSize } = this.props;
-    let ApiUrl = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=6d1fa2128e7f4a34aa38fdbd66a8d19b&page=${this.state.page}&pageSize=${pageSize}`;
+    let ApiUrl = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey={Your-Key}&page=${this.state.page}&pageSize=${pageSize}`;
     this.setState({ loading: true });
     let data = await fetch(ApiUrl);
     let parsedData = await data.json();
